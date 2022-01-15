@@ -18,7 +18,7 @@ contract SuperAccountabilityX is SuperAppBase {
     uint256 private tasksCount;
     Task[] public tasks; // array containing tasks
     mapping(address => uint256) public senderToTaskId; // mapping tracking user recent task to task id
-
+    mapping(address => uint256[]) public judgeToTaskId; // mapping tracking judge tasks
     enum TaskStatus {
         NOT_STARTED,
         STARTED,
@@ -76,11 +76,8 @@ contract SuperAccountabilityX is SuperAppBase {
             address(this)
         );
         uint256 taskId = senderToTaskId[msg.sender];
-        if (taskId > 0) {
-            require(
-                tasks[taskId].status != TaskStatus.NOT_STARTED,
-                "You already started a task"
-            );
+        if(taskId > 0) {
+            require(tasks[taskId].status != TaskStatus.NOT_STARTED, 'You already started a task');
         }
         require(oldFlow <= 0, "User already streaming");
         _;
@@ -156,6 +153,7 @@ contract SuperAccountabilityX is SuperAppBase {
         );
         tasks.push(newTask);
         senderToTaskId[msg.sender] = tasksCount;
+        judgeToTaskId[_judge].push(tasksCount);
         emit TaskCreated(
             tasksCount,
             msg.sender,
