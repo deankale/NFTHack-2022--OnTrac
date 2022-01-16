@@ -1,3 +1,10 @@
+# IMPORTANT NOTE 
+
+## To interact with the contract you need superfluid fUSDCx, you can grab it from their dashboard `https://app.superfluid.finance/`  and then upgrade fUSDC to fUSDCx or : 
+ - Head over to : `https://rinkeby.etherscan.io/address/0xbe49ac1EadAc65dccf204D4Df81d650B50122aB2#writeContract`
+ - Mint fUSDC to your wallet address by calling mint function
+ - Go to `https://app.superfluid.finance/` and upgrade your minted fUSDC to fUSDCx by depositing.
+
 # NFTHack-2022--OnTrac
 This is the official ETHGlobal NFTHackathon 2022 submission for our project "OnTrac".
 
