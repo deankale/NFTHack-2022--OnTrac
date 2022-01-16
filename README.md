@@ -42,7 +42,7 @@ Frontend:
 
 The frontend was built with React, TailwindCSS, and Ethers.js. The ability to connect your wallet to the DApp was made possible with the Web3Modal library. There are three main components to the frontend, the Doer Dashboard, the Viewer Dashboard, and the NFTs dashboard. The Doer Dashboard allows users to create new tasks or view the most recent task they've created. If they decide to create a task, they are brought to a multi-page form where they can input all the details about the task. This is also where smart contract interactions are made so the user can spend their USDC and create a stream using the Superfluid SDK. Once a task is created, it is shown on the Doer Dashboard along with information such as the title, partner address, the amount flowed so far, the reward status, and an option to abandon the task. All of this data is retrieved directly from our smart contract with the use of the Ethers.js library. The viewer dashboard displays a list of task details for receivers/judges. It also allows them to either approve a task once it is complete or expire a task if it expires. The NFTs dashboard is for users to view all of the NFTs they've earned from the protocol. The NFTs are retrieved using the Moralis API and filtered to only show the ones that belong to our smart contract. The more tasks a user completes, the more NFTs they earn.
 
-Front end is deployed on Fleek : https://proud-bar-7328.on.fleek.co/
+Front end is deployed on Fleek : https://tiny-river-8548.on.fleek.co/
 
 Backend:
 
