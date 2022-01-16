@@ -230,7 +230,7 @@ contract SuperAccountabilityX is SuperAppBase {
         emit TaskExpired(_taskId);
         (uint256 timestamp, int96 flowRate, , ) = cfa.getFlow(
             acceptedToken,
-            msg.sender,
+            tasks[_taskId].sender,
             address(this)
         );
         uint256 amountToSendBack = uint256(uint96(flowRate)) *
