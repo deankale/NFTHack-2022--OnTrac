@@ -51,7 +51,7 @@ const networkConfig = {
     },
     1666700000: {
         name: 'harmony',
-        simple_accountability: '1666700000',
+        simple_accountability: '0x1B11B9AD3f07aC613f20d4009337D64653A67B67',
     },
 
 }
