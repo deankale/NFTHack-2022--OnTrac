@@ -48,7 +48,11 @@ const networkConfig = {
         fdai: '0x88271d333C72e51516B67f5567c728E702b3eeE8',
         fdaix: '0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00',
         ethx: '0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947'
-    }
+    },
+    1666700000: {
+        name: 'harmony',
+        simple_accountability: '1666700000',
+    },
 
 }
 
