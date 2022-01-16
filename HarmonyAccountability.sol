@@ -7,7 +7,7 @@ import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 
-contract SimpleAccountability is ERC721URIStorage {
+contract HarmonyAccountability is ERC721URIStorage {
     
     string constant ape1 = 'ipfs://Qme5CsX2XstGbN2ziqziKt8BdyqSYcZCJwHescLxmSDzyg';
     string constant ape2 = 'ipfs://QmPh8szfUV6XkiueMFe9gYCF3WMj5hHwaiCobpMuxXPA3d';
