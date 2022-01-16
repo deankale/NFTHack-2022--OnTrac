@@ -1,11 +1,9 @@
 # NFTHack-2022--OnTrac
-this is the official ETHGlobal NFTHackathon 2022 submission for our project "OnTrac"
-
-
+This is the official ETHGlobal NFTHackathon 2022 submission for our project "OnTrac".
 
 # TL;DR How it Works:
-1. User initiates a task to complete, connects their wallet address + the address of a trusted partner
-2. User picks a deadline and a max price (in crypto-tokens) they are willing to lose if they fail
+1. User initiates a task to complete, connects their wallet + enters the address of a trusted partner
+2. User picks a deadline and a max price (in crypto-tokens) they are willing to lose if they fail to complete their task
 3. With the help of [SuperFluid](https://www.superfluid.finance/home)'s SDK will stream money using SuperFluid from User's wallet into a vault at a steady rate until the deadline hits
 4. If they pass, they get their money back and a minted NFT, if they give up early or fail to complete, the money moves from the vault into their trusted partner's wallet and they get no NFT.
 5. OnTrac has potential to restructure independent learning online, freelance work agreements, and promote a culture of self-improvement backed by science and code.
@@ -54,7 +52,13 @@ In the case the user A stops stream or abandon task or the deadline is expired, 
 
 The NFT contract is linked to the Accountability contract, and let user mint the NFT only if his task is finished. For the purpose of the hackathon we already created a sample collection of NFTs and uploaded them on IPFS in a static way, but the idea is to take this further and create a custom NFT for user and Task : taking a base image + adding user and task data creating the image on the backend then uploading to ipfs, then sending tokenURI to contract for the NFT mint, each platform building on us can customise the NFT contract and NFT minting process to suit its needs as the Accountability and NFT contract are separate and you only need the NFT contract pointing to the Accountability contract for knowing whether user finished task or not. We separated the two contracts for 2 reasons : importing all the superfluid libraries is heavy and we reach contract max size quickly when combining it with NFT minting logic, and also we found it more convenient to have separate contracts and a modular architecture.
 
-The objectif is to gamify and make task completions fun, the minimum flowrate required is only 1$ per month to start a task and we assume users are only gonna stream low amounts, e.g maybe you lose 10$ if you dont make your CV but even if the amount is low it will motivate you to complete your task and complete it quickly especially when you see the money going out of your wallet continuously. We want to leverage the psychological factor and motivate people to finish tasks and have fun in the same time.
+The objective is to gamify and make task completions fun, the minimum flowrate required is only 1$ per month to start a task and we assume users are only going to stream low amounts, e.g maybe you lose 10$ if you dont make your CV but even if the amount is low it will motivate you to complete your task and complete it quickly especially when you see the money going out of your wallet continuously. We want to leverage the psychological factor and motivate people to finish tasks and have fun in the same time.
+
+Contract Deployments:
+-| Rinkeby | Mumbai | Harmony
+-|---------|--------|--------
+superAccountabilityX| 0x919753ca7f9d9B24a93e4823B9b8cB657bA5e0b5 | 0xCdd7bDdF25c18c3830a60b73b5BFc40Ee3E60088 | ?
+superAccountabilityNFT | 0x1eD52D1aD1633EBdA246dF5f5E543a8300014535 | 0xfB4979C9d002bfeB26E21012CaD954fCb3791022 | ?
 
 
 
